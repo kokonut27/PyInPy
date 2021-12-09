@@ -23,9 +23,9 @@ def traceback(line, error_type, file, actual_error):
         else:
           exit("")
       else:
-
+        exit("")
     else:
-
+      exit("")
 
 # traceback("e", "e", "e")
 
