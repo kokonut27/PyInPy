@@ -36,6 +36,17 @@ ver = "Python "+ver_+" on linux\nType \"help\", \"copyright\", \"credits\" or \"
 def clear():
   os.system("clear")
 
+def help_func():
+  print("Type help() for interactive help, or help(object) for help about object.")
+
+def interactive_help_func():
+  print("\nWelcome to Python 3.8's help utility!\nIf this is your first time using Python, you should definitely check out\nthe tutorial on the Internet at https://docs.python.org/3.8/tutorial/.\nEnter the name of any module, keyword, or topic to get help on writing\nPython programs and using Python modules.  To quit this help utility and\nreturn to the interpreter, just type \"quit\".\nTo get a list of available modules, keywords, symbols, or topics, type\n\"modules\", \"keywords\", \"symbols\", or \"topics\".  Each module also comes with a one-line summary of what it does; to list the modules whose name\nor summary contain a given string such as \"spam\", type \"modules spam\".\n")
+  while True:
+    help_in = input("help> ")
+
+    # Using builtin function for now smh
+    print(help(help_in))
+
 def create_func(func_name, arguments):
   pass
 
@@ -48,4 +59,7 @@ print(ver)
 while True:
   func = input(">>> ")
 
-  
+  if func == "help":
+    help_func()
+  elif func == "help()":
+    interactive_help_func()
